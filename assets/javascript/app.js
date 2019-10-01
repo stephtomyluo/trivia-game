@@ -9,6 +9,11 @@ $(document).on('click', '.answerButton', function(e){
     trivia.clicked(e);
 });
 
+// Button to activate reset method 
+$(document).on('click', '#reset', function(){
+    trivia.reset();
+});
+
 // Array of objects for the questions, choices, answers, and associated image 
 var questions = [
     {question: "What is the name of Hayao Miyazaki's studio?",
@@ -106,7 +111,8 @@ var trivia = {
 // Every 1 second, decr the timer & post Q and A choices to page
     loadingQuestion: function(){
         timer = setInterval(trivia.countdown, 1000);
-        $('.wrapper').html('<h2>' + questions[trivia.currentQuestion].question + '</h2>');
+        $('.wrapper').html("<h2> Time Remaining: <span id='counter'>10</span> seconds</h2>")
+        $('.wrapper').append('<h2>' + questions[trivia.currentQuestion].question + '</h2>');
 
         for (var i = 0; i < questions[trivia.currentQuestion].answerChoices.length; i++) {
             $('.wrapper').append('<button class="answerButton" id="button-' + i + '"  data-name="' + questions[trivia.currentQuestion].answerChoices[i] +'">' + questions[trivia.currentQuestion].answerChoices[i] + '</button>');
@@ -180,15 +186,22 @@ var trivia = {
             setTimeout(trivia.nextQuestion, 2*1000);
         }
     },
-// When last Q is clicked 
+// When last Q is clicked, show results
     results: function(){
         clearInterval(timer);
         $('.wrapper').html('<h2>No More!</h2>');
         $('.wrapper').append('<h3>Right: ' + trivia.right + '</h3>');
         $('.wrapper').append('<h3>Wrong: ' + trivia.wrong + '</h3>');
         $('.wrapper').append('<h3>Left Unanswered: ' + trivia.leftUnanswered + '</h3>');
+        $('.wrapper').append("<button id='reset'>Reset</button>");
     },
+// Resetting 
     reset: function(){
-
+        trivia.currentQuestion = 0;
+        trivia.counter = 0;
+        trivia.right = 0;
+        trivia. wrong = 0;
+        trivia.leftUnanswered = 0;
+        trivia.loadingQuestion();
     }
 }
