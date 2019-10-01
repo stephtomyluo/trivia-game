@@ -136,11 +136,30 @@ var trivia = {
         trivia.wrongAnswer();
         }
     },
+// Add points if right, & say way to go -> take to next Q or results, if last Q
     rightAnswer: function(){
-        console.log('Go you!')
+        console.log('Go you!');
+        clearInterval(timer);
+        trivia.right++;
+        $('.wrapper').html('<h3>Way to go!</h3>');
+
+        if (trivia.currentQuestion === questions.length - 1) {
+            setTimeout(trivia.results, 3*1000);
+        } else {
+            setTimeout(trivia.nextQuestion, 3*1000);
+        }
     },
     wrongAnswer: function(){
         console.log('Wrooooong!')
+        clearInterval(timer);
+        trivia.wrong++;
+        $('.wrapper').html('<h3>Seriously...?</h3>');
+
+        if (trivia.currentQuestion === questions.length - 1) {
+            setTimeout(trivia.results, 3*1000);
+        } else {
+            setTimeout(trivia.nextQuestion, 3*1000);
+        }
     },
     results: function(){
 
