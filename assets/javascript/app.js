@@ -124,15 +124,19 @@ var trivia = {
     timesUp: function (){
 
     },
+// Reset counter for following question, move on to next Q (notified right or wrong)
     nextQuestion: function(){
-
+        trivia.counter = 10;
+        $('#counter').html(trivia.counter);
+        trivia.currentQuestion++;
+        trivia.loadingQuestion();
     },
 // Stop timer & run right or wrong answer method 
     clicked: function(e){
-    clearInterval(timer);
-    if ($(e.target).data('name') === questions[trivia.currentQuestion].answer) {
+        clearInterval(timer);
+        if ($(e.target).data('name') === questions[trivia.currentQuestion].answer) {
         trivia.rightAnswer();
-    } else {
+        } else {
         trivia.wrongAnswer();
         }
     },
@@ -144,9 +148,9 @@ var trivia = {
         $('.wrapper').html('<h3>Way to go!</h3>');
 
         if (trivia.currentQuestion === questions.length - 1) {
-            setTimeout(trivia.results, 3*1000);
+            setTimeout(trivia.results, 2*1000);
         } else {
-            setTimeout(trivia.nextQuestion, 3*1000);
+            setTimeout(trivia.nextQuestion, 2*1000);
         }
     },
     wrongAnswer: function(){
@@ -156,9 +160,9 @@ var trivia = {
         $('.wrapper').html('<h3>Seriously...?</h3>');
 
         if (trivia.currentQuestion === questions.length - 1) {
-            setTimeout(trivia.results, 3*1000);
+            setTimeout(trivia.results, 2*1000);
         } else {
-            setTimeout(trivia.nextQuestion, 3*1000);
+            setTimeout(trivia.nextQuestion, 2*1000);
         }
     },
     results: function(){
