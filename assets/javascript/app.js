@@ -101,6 +101,7 @@ var trivia = {
     counter: 10,
     right: 0,
     wrong: 0,
+    leftUnanswered: 0,
 
 // Every 1 second, decr the timer & post Q and A choices to page
     loadingQuestion: function(){
@@ -123,6 +124,7 @@ var trivia = {
     },
     timesUp: function (){
         clearInterval(timer);
+        trivia.leftUnanswered++;
         $('.wrapper').html('<h2>Time is up amateur!</h2>');
         $('.wrapper').append('<h3>The right answer was: ' + questions[trivia.currentQuestion].answer + '</h3>');
 
@@ -178,8 +180,13 @@ var trivia = {
             setTimeout(trivia.nextQuestion, 2*1000);
         }
     },
+// When last Q is clicked 
     results: function(){
-
+        clearInterval(timer);
+        $('.wrapper').html('<h2>No More!</h2>');
+        $('.wrapper').append('<h3>Right: ' + trivia.right + '</h3>');
+        $('.wrapper').append('<h3>Wrong: ' + trivia.wrong + '</h3>');
+        $('.wrapper').append('<h3>Left Unanswered: ' + trivia.leftUnanswered + '</h3>');
     },
     reset: function(){
 
