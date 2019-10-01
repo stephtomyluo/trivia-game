@@ -1,7 +1,12 @@
-// Make it so that button disappears 
+// Make it so that button disappears and question and answer choices appear
 $('#start').on('click', function() {
     $('#start').remove();
     trivia.loadingQuestion();
+});
+
+// Tell you if answer right or wrong
+$(document).on('click', '.answerButton', function(e){
+    trivia.clicked(e);
 });
 
 // Array of objects for the questions, choices, answers, and associated image 
@@ -122,14 +127,20 @@ var trivia = {
     nextQuestion: function(){
 
     },
-    clicked: function(){
-
+// Stop timer & run right or wrong answer method 
+    clicked: function(e){
+    clearInterval(timer);
+    if ($(e.target).data('name') === questions[trivia.currentQuestion].answer) {
+        trivia.rightAnswer();
+    } else {
+        trivia.wrongAnswer();
+        }
     },
     rightAnswer: function(){
-
+        console.log('Go you!')
     },
     wrongAnswer: function(){
-
+        console.log('Wrooooong!')
     },
     results: function(){
 
