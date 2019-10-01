@@ -122,7 +122,17 @@ var trivia = {
         }
     },
     timesUp: function (){
+        clearInterval(timer);
+        $('.wrapper').html('<h2>Time is up amateur!</h2>');
+        $('.wrapper').append('<h3>The right answer was: ' + questions[trivia.currentQuestion].answer + '</h3>');
 
+// If last Q -> results screen, if not -> next Q  
+
+        if (trivia.currentQuestion === questions.length - 1) {
+            setTimeout(trivia.results, 2*1000);
+        } else {
+            setTimeout(trivia.nextQuestion, 2*1000);
+        }
     },
 // Reset counter for following question, move on to next Q (notified right or wrong)
     nextQuestion: function(){
@@ -158,6 +168,9 @@ var trivia = {
         clearInterval(timer);
         trivia.wrong++;
         $('.wrapper').html('<h3>Seriously...?</h3>');
+// Tell you what the right answer was 
+        $('.wrapper').append('<h3>The right answer was: ' + questions[trivia.currentQuestion].answer + '</h3>');
+
 
         if (trivia.currentQuestion === questions.length - 1) {
             setTimeout(trivia.results, 2*1000);
