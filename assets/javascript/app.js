@@ -128,6 +128,7 @@ var trivia = {
             trivia.timesUp();
         }
     },
+// Leaves Q unanswered b/c time ran out -> shows you A
     timesUp: function (){
         clearInterval(timer);
         trivia.leftUnanswered++;
@@ -164,6 +165,7 @@ var trivia = {
         clearInterval(timer);
         trivia.right++;
         $('.wrapper').html('<h3>Way to go!</h3>');
+        $('.wrapper').append(`<img src='${questions[trivia.currentQuestion].img}'>`); 
 
         if (trivia.currentQuestion === questions.length - 1) {
             setTimeout(trivia.results, 2*1000);
@@ -198,7 +200,8 @@ var trivia = {
 // Resetting 
     reset: function(){
         trivia.currentQuestion = 0;
-        trivia.counter = 0;
+// Needed to set it to the original countdown time, NOT 0 
+        trivia.counter = 10; 
         trivia.right = 0;
         trivia. wrong = 0;
         trivia.leftUnanswered = 0;
