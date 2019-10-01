@@ -1,8 +1,10 @@
 // Make it so that button disappears 
 $('#start').on('click', function() {
     $('#start').remove();
+    trivia.loadingQuestion();
 });
 
+// Array of objects for the questions, choices, answers, and associated image 
 var questions = [
     {question: "What is the name of Hayao Miyazaki's studio?",
     answerChoices: ['Giblet', 
@@ -87,17 +89,25 @@ var questions = [
 //  Add more questions, might make into howl's moving castle 
 ];
 
+// Game object and methods 
 var trivia = {
     questions: questions,
-    currentQuestion: 0,
+    currentQuestion: 0, 
     counter: 10,
     right: 0,
     wrong: 0,
 
+// Every 1 second, decr the timer & post Q and A choices to page
     loadingQuestion: function(){
         timer = setInterval(trivia.countdown, 1000);
-        $('')
+        $('.wrapper').html('<h2>' + questions[trivia.currentQuestion].question + '</h2>');
+
+        for (var i = 0; i < questions[trivia.currentQuestion].answerChoices.length; i++) {
+            $('.wrapper').append('<button class="answerButton" id="button-' + i + '"  data-name="' + questions[trivia.currentQuestion].answerChoices[i] +'">' + questions[trivia.currentQuestion].answerChoices[i] + '</button>');
+        }
+
     },
+// Change the timer, tracking when/if time runs out
     countdown: function(){
         trivia.counter--;
         $('#counter').html(trivia.counter);
