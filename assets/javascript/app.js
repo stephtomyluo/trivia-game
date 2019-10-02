@@ -180,6 +180,7 @@ var trivia = {
         $('.wrapper').html('<h3>Seriously...?</h3>');
 // Tell you what the right answer was 
         $('.wrapper').append('<h3>The right answer was: ' + questions[trivia.currentQuestion].answer + '</h3>');
+        $('.wrapper').append(`<img src='${questions[trivia.currentQuestion].img}'>`); 
 
 
         if (trivia.currentQuestion === questions.length - 1) {
