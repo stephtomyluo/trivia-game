@@ -16,87 +16,142 @@ $(document).on('click', '#reset', function(){
 
 // Array of objects for the questions, choices, answers, and associated image 
 var questions = [
-    {question: "What is the name of Hayao Miyazaki's studio?",
-    answerChoices: ['Giblet', 
-    'Ghibli', 
-    'HM Studio', 
-    'Miyazaki Studio'],
-    answer: 'Ghibli',
-    img: 'assets/images/studio-ghibli.jpg'
+
+    {question: "What color is Howl's jacket when Sophie first meets him?",
+    answerChoices: ['Pink and Purple',
+    'Blue and Pink',
+    'Yellow and Blue',
+    "He doesn't have a jacket"],
+    answer: 'Blue and Pink',
+    img: 'assets/images/howl.gif'
     },
 
-    {question: "At the end of 'Spirited Away' who do we find out Haku really is?",
-    answerChoices: ['The Kohaku river spirit',
-    'The Hime fire spirit', 
-    'The Janta water spirit', 
-    'The Hoshi love spirit'],
-    answer: 'The Kohaku river spirit',
-    img: 'assets/images/kohaku.gif'
+    {question: "The Witch of the Waste arrives at the hat shop and insults Sophie. What does she call her?",
+    answerChoices: ['The tackiest thing here',
+    'The plainest thing here',
+    'The ugliest thing here',
+    'The most boring thing here'],
+    answer: 'The tackiest thing here',
+    img: 'assets/images/witch.gif'
     },
 
-    {question: "In the English version of 'Howl's Moving Castle', who does Calcifer's voice over?",
-    answerChoices: ['Christian Bale', 
-    'Billy Crystal', 
-    'Crispin Freeman', 
-    'Mark Silverman'],
-    answer: 'Billy Crystal',
-    img: 'assets/images/calcifer.gif'
+    {question: "What spell did the Witch of the Waste cast on Sophie?",
+    answerChoices: ['To make her unable to speak',
+    "To make her be forced to do all of the Witch's bidding",
+    'To make her into an old woman',
+    'To make her hated by everyone else'],
+    answer: 'To make her into an old woman',
+    img: 'assets/images/old.gif'
+    },
+
+    {question: "What does Sophie call the scarecrow?",
+    answerChoices: ['Turnip-head',
+    'Pumpkin-head',
+    'Carrot-head',
+    'Potato-head'],
+    answer: 'Turnip-head',
+    img: 'assets/images/turnipRain.gif'
     },
 
     {question: "In 'Howl's Moving Castle', who or what is Markl?",
-    answerChoices: ["He is Howl's brother.",
-    "It is a curse.",
-    "It is Howl's castle.",
-    "He is Howl's assistant."],
+    answerChoices: ["He is Howl's brother",
+    "It is a curse",
+    "It is Howl's castle",
+    "He is Howl's assistant"],
     answer: "He is Howl's assistant",
-    img: 'assets/images/markl.gif'
+    img: 'assets/images/assistant.gif'
     },
 
-    {question: 'Which movie is about a five year old boy and his princess goldfish?',
-    answerChoices: ['Princess Mononoke',
-    'Ponyo on the Cliff',
-    'Lupin III: Castle of Cagliostro',
-    'Future Boy Conan'],
-    answer: 'Ponyo on the Cliff',
-    img: 'assets/images/ponyo.gif'
+    {question: "What was the name of Howl's fire demon?",
+    answerChoices: ['Pyro',
+    'Calcifer',
+    "He didn't have a name",
+    'Billy'],
+    answer: 'Calcifer',
+    img: 'assets/images/blueFire.gif'
     },
 
-    {question: 'I am a Princess of Humans who was raised by a God of the Forest. Who am I?',
-    answerChoices: ['Chihiro',
-    'Sheeta',
-    'Sen',
-    'Mononoke'],
-    answer: 'Mononoke',
-    img: 'assets/images/mononoke.gif'
+    {question: "What is Howl's natural hair colour?",
+    answerChoices: ['Blonde',
+    'Brown',
+    'Red',
+    'Black'],
+    answer: "Black",
+    img: 'assets/images/goop.gif'
     },
 
-    {question: 'This is the story of a young witch learning magic in the big city. Which movie is this?',
-    answerChoices: ['Nausicaä and the Valley of the Wind',
-    "Kiki's Delivery Service",
-    'The Cat Returns',
-    'My Neighbor Totoro'],
-    answer: "Kiki's Delivery Service",
-    img: 'assets/images/kiki.gif'
+    {question: "What colour did Howl's hair turn after Sophie messed up his magic potions in the bathroom?",
+    answerChoices: ['Green',
+    'Orange',
+    'Purple',
+    'Pink'],
+    answer: 'Orange',
+    img: 'assets/images/orange.gif'
     },
 
-    {question: "In the movie 'Spirited Away', Chihiro befriends which combination of characters?",
-    answerChoices: ['Yubaba, No Face, Boh',
-    'No Face, Aogaeru, Zeniba',
-    'Aogaeru, Kamajii, Lin',
-    'No Face, Haku, Boh'],
-    answer: 'No Face, Haku, Boh',
-    img: 'assets/images/3.gif'
+    {question: "Complete this quotation: 'I see no point in _____ if I can't be _____.'",
+    answerChoices: ['going, whole',
+    'trying, blonde',
+    'living, beautiful',
+    'loving, perfect'],
+    answer: 'living, beautiful',
+    img: 'assets/images/hissyfit.gif'
     },
 
     {question: "In 'Howl's Moving Castle', Howl has a missing organ. What is it?",
+    answerChoices: ["Howl's future",
+    "Howl's childhood",
+    'Her own future',
+    "Calcifer's childhood"],
+    answer: "Howl's childhood",
+    img: 'assets/images/heart.gif'
+    },
+
+    {question: "After Sophie throws water on Calcifer and the castle splits apart, she goes through a doorway that leads where?",
     answerChoices: ['His heart',
     'One of his lungs',
     'His brain',
     'His stomach'],
     answer: 'His heart',
-    img: 'assets/images/heart.gif'
-    }
-//  Add more questions, might make into howl's moving castle 
+    img: 'assets/images/chest.gif'
+    },
+
+    {question: "What happens if Calcifer dies?",
+    answerChoices: ["He reincarnates as a human being",
+    'The war ends',
+    'Howl dies',
+    'Sophie turns back into a young girl'],
+    answer: 'Howl dies',
+    img: 'assets/images/falling.gif'
+    },
+
+    {question: "Why did Sophie's kiss break the spell on Turnip Head (the prince)?",
+    answerChoices: ['She was his true love',
+    'She used magic',
+    'There was nothing special about it, he just had to be kissed',
+    'What kiss?'],
+    answer: 'She was his true love',
+    img: 'assets/images/turnip.gif'
+    },
+
+    {question: "Fill in the missing words in the following quote: 'Sophie! Your hair is _____ like ______.'",
+    answerChoices: ['auburn, firelight',
+    'grey, ashes',
+    'red, ketchup',
+    'silver, starlight'],
+    answer: 'silver, starlight',
+    img: 'assets/images/hug.gif'
+    },
+
+    {question: "At the end of the film, who does Madam Suliman call a 'traitor'?",
+    answerChoices: ['The Witch of the Waste',
+    'Heen the dog',
+    'Turnip Head the scarecrow',
+    'Calcifer'],
+    answer: 'Heen the dog',
+    img: 'assets/images/heen.gif'
+    },
+
 ];
 
 // Game object and methods 
@@ -138,9 +193,9 @@ var trivia = {
 // If last Q -> results screen, if not -> next Q  
 
         if (trivia.currentQuestion === questions.length - 1) {
-            setTimeout(trivia.results, 2*1000);
+            setTimeout(trivia.results, 3*1000);
         } else {
-            setTimeout(trivia.nextQuestion, 2*1000);
+            setTimeout(trivia.nextQuestion, 3*1000);
         }
     },
 // Reset counter for following question, move on to next Q (notified right or wrong)
@@ -168,9 +223,9 @@ var trivia = {
         $('.wrapper').append(`<img src='${questions[trivia.currentQuestion].img}'>`); 
 
         if (trivia.currentQuestion === questions.length - 1) {
-            setTimeout(trivia.results, 2*1000);
+            setTimeout(trivia.results, 3*1000);
         } else {
-            setTimeout(trivia.nextQuestion, 2*1000);
+            setTimeout(trivia.nextQuestion, 3*1000);
         }
     },
     wrongAnswer: function(){
@@ -184,9 +239,9 @@ var trivia = {
 
 
         if (trivia.currentQuestion === questions.length - 1) {
-            setTimeout(trivia.results, 2*1000);
+            setTimeout(trivia.results, 3*1000);
         } else {
-            setTimeout(trivia.nextQuestion, 2*1000);
+            setTimeout(trivia.nextQuestion, 3*1000);
         }
     },
 // When last Q is clicked, show results
