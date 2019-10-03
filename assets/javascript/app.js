@@ -189,6 +189,7 @@ var trivia = {
         trivia.leftUnanswered++;
         $('.wrapper').html('<h2>Time is up amateur!</h2>');
         $('.wrapper').append('<h3>The right answer was: ' + questions[trivia.currentQuestion].answer + '</h3>');
+        $('.wrapper').append(`<img src='${questions[trivia.currentQuestion].img}'>`); 
 
 // If last Q -> results screen, if not -> next Q  
 
