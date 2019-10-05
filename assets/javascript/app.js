@@ -98,7 +98,7 @@ var questions = [
     img: 'assets/images/hissyfit.gif'
     },
 
-    {question: "In 'Howl's Moving Castle', Howl has a missing organ. What is it?",
+    {question: "After Sophie throws water on Calcifer and the castle splits apart, she goes through a doorway that leads where?",
     answerChoices: ["Howl's future",
     "Howl's childhood",
     'Her own future',
@@ -107,7 +107,7 @@ var questions = [
     img: 'assets/images/heart.gif'
     },
 
-    {question: "After Sophie throws water on Calcifer and the castle splits apart, she goes through a doorway that leads where?",
+    {question: "Howl has a missing organ. What is it?",
     answerChoices: ['His heart',
     'One of his lungs',
     'His brain',
