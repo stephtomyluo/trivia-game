@@ -189,7 +189,10 @@ var trivia = {
         trivia.leftUnanswered++;
         $('.wrapper').html('<h2>Time is up amateur!</h2>');
         $('.wrapper').append('<h3>The right answer was: ' + questions[trivia.currentQuestion].answer + '</h3>');
-        $('.wrapper').append(`<img src='${questions[trivia.currentQuestion].img}'>`); 
+// Create a new img tag, attributing img src, appending to wrapper 
+        var timeoutImage = $('<img>')
+        timeoutImage.attr("src", "/assets/images/time.gif")
+        $('.wrapper').append(timeoutImage); 
 
 // If last Q -> results screen, if not -> next Q  
 
@@ -236,7 +239,10 @@ var trivia = {
         $('.wrapper').html('<h3>Seriously...?</h3>');
 // Tell you what the right answer was 
         $('.wrapper').append('<h3>The right answer was: ' + questions[trivia.currentQuestion].answer + '</h3>');
-        $('.wrapper').append(`<img src='${questions[trivia.currentQuestion].img}'>`); 
+// Create a new img tag, attributing img src, appending to wrapper 
+        var wrongImage = $('<img>')
+        wrongImage.attr("src", "/assets/images/thumbsDown.gif")
+        $('.wrapper').append(wrongImage); 
 
 
         if (trivia.currentQuestion === questions.length - 1) {
