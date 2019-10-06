@@ -23,7 +23,7 @@ var questions = [
     'Yellow and Blue',
     "He doesn't have a jacket"],
     answer: 'Blue and Pink',
-    img: 'assets/images/howl.gif'
+    img: './assets/images/howl.gif'
     },
 
     {question: "The Witch of the Waste arrives at the hat shop and insults Sophie. What does she call her?",
@@ -32,7 +32,7 @@ var questions = [
     'The ugliest thing here',
     'The most boring thing here'],
     answer: 'The tackiest thing here',
-    img: 'assets/images/witch.gif'
+    img: './assets/images/witch.gif'
     },
 
     {question: "What spell did the Witch of the Waste cast on Sophie?",
@@ -41,7 +41,7 @@ var questions = [
     'To make her into an old woman',
     'To make her hated by everyone else'],
     answer: 'To make her into an old woman',
-    img: 'assets/images/old.gif'
+    img: './assets/images/old.gif'
     },
 
     {question: "What does Sophie call the scarecrow?",
@@ -50,7 +50,7 @@ var questions = [
     'Carrot-head',
     'Potato-head'],
     answer: 'Turnip-head',
-    img: 'assets/images/turnipRain.gif'
+    img: './assets/images/turnipRain.gif'
     },
 
     {question: "In 'Howl's Moving Castle', who or what is Markl?",
@@ -59,7 +59,7 @@ var questions = [
     "It is Howl's castle",
     "He is Howl's assistant"],
     answer: "He is Howl's assistant",
-    img: 'assets/images/assistant.gif'
+    img: './assets/images/assistant.gif'
     },
 
     {question: "What was the name of Howl's fire demon?",
@@ -68,7 +68,7 @@ var questions = [
     "He didn't have a name",
     'Billy'],
     answer: 'Calcifer',
-    img: 'assets/images/blueFire.gif'
+    img: './assets/images/blueFire.gif'
     },
 
     {question: "What is Howl's natural hair colour?",
@@ -77,7 +77,7 @@ var questions = [
     'Red',
     'Black'],
     answer: "Black",
-    img: 'assets/images/goop.gif'
+    img: './assets/images/goop.gif'
     },
 
     {question: "What colour did Howl's hair turn after Sophie messed up his magic potions in the bathroom?",
@@ -86,7 +86,7 @@ var questions = [
     'Purple',
     'Pink'],
     answer: 'Orange',
-    img: 'assets/images/orange.gif'
+    img: './assets/images/orange.gif'
     },
 
     {question: "Complete this quotation: 'I see no point in _____ if I can't be _____.'",
@@ -95,7 +95,7 @@ var questions = [
     'living, beautiful',
     'loving, perfect'],
     answer: 'living, beautiful',
-    img: 'assets/images/hissyfit.gif'
+    img: './assets/images/hissyfit.gif'
     },
 
     {question: "After Sophie throws water on Calcifer and the castle splits apart, she goes through a doorway that leads where?",
@@ -104,7 +104,7 @@ var questions = [
     'Her own future',
     "Calcifer's childhood"],
     answer: "Howl's childhood",
-    img: 'assets/images/heart.gif'
+    img: './assets/images/heart.gif'
     },
 
     {question: "Howl has a missing organ. What is it?",
@@ -113,7 +113,7 @@ var questions = [
     'His brain',
     'His stomach'],
     answer: 'His heart',
-    img: 'assets/images/chest.gif'
+    img: './assets/images/chest.gif'
     },
 
     {question: "What happens if Calcifer dies?",
@@ -122,7 +122,7 @@ var questions = [
     'Howl dies',
     'Sophie turns back into a young girl'],
     answer: 'Howl dies',
-    img: 'assets/images/falling.gif'
+    img: './assets/images/falling.gif'
     },
 
     {question: "Why did Sophie's kiss break the spell on Turnip Head (the prince)?",
@@ -131,7 +131,7 @@ var questions = [
     'There was nothing special about it, he just had to be kissed',
     'What kiss?'],
     answer: 'She was his true love',
-    img: 'assets/images/turnip.gif'
+    img: './assets/images/turnip.gif'
     },
 
     {question: "Fill in the missing words in the following quote: 'Sophie! Your hair is _____ like ______.'",
@@ -140,7 +140,7 @@ var questions = [
     'red, ketchup',
     'silver, starlight'],
     answer: 'silver, starlight',
-    img: 'assets/images/hug.gif'
+    img: './assets/images/hug.gif'
     },
 
     {question: "At the end of the film, who does Madam Suliman call a 'traitor'?",
@@ -149,7 +149,7 @@ var questions = [
     'Turnip Head the scarecrow',
     'Calcifer'],
     answer: 'Heen the dog',
-    img: 'assets/images/heen.gif'
+    img: './assets/images/heen.gif'
     },
 
 ];
