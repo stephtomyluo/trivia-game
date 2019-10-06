@@ -191,7 +191,7 @@ var trivia = {
         $('.wrapper').append('<h3>The right answer was: ' + questions[trivia.currentQuestion].answer + '</h3>');
 // Create a new img tag, attributing img src, appending to wrapper 
         var timeoutImage = $('<img>')
-        timeoutImage.attr("src", "/assets/images/time.gif")
+        timeoutImage.attr("src", "./assets/images/time.gif")
         $('.wrapper').append(timeoutImage); 
 
 // If last Q -> results screen, if not -> next Q  
@@ -241,7 +241,7 @@ var trivia = {
         $('.wrapper').append('<h3>The right answer was: ' + questions[trivia.currentQuestion].answer + '</h3>');
 // Create a new img tag, attributing img src, appending to wrapper 
         var wrongImage = $('<img>')
-        wrongImage.attr("src", "/assets/images/thumbsDown.gif")
+        wrongImage.attr("src", "./assets/images/thumbsDown.gif")
         $('.wrapper').append(wrongImage); 
 
 
